@@ -1,3 +1,3 @@
-# Sabloane-de-proiectare-Lab-1
+# Sabloane-de-proiectare
 Lab1
 lABORATOR 1 TEST
