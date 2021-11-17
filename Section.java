@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Section implements Element {
     private String title;
@@ -9,32 +10,27 @@ public class Section implements Element {
         this.elemente = new ArrayList<Element>();
     }
 
-    @Override
-    public void add(Element element) throws Exception {
-        for (Element i : this.elemente)
-            if (i.find(element))
-                throw new Exception("Fail");
+    public Section(Section section) {
+        this.title = section.title;
+        this.elemente = new ArrayList<>();
+        Collections.copy(this.elemente, section.elemente);
+    }
 
+    @Override
+    public void add(Element elementToBeAdded) throws Exception {
+        Element element = Utils.checkAndReturnCopy(elementToBeAdded);
         this.elemente.add(element);
     }
+
+
 
     @Override
     public void remove(Element element) {
         this.elemente.remove(element);
     }
 
-    @Override
-    public boolean find(Element element) {
-        for (Element i : this.elemente) {
-            if (i.find(element))
-                return true;
-        }
-
-        return false;
-    }
-
     public void print() {
-        System.out.println(this.title);
+        System.out.println("Title: " + this.title);
 
         for (Element i : this.elemente)
             i.print();

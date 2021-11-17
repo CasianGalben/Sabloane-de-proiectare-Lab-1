@@ -1,13 +1,24 @@
-public class Image implements Element {
+import java.util.concurrent.TimeUnit;
+
+public class Image implements Element, Picture {
     private String imageName;
+    private Dimension dim = new Dimension(400,400);
 
     public Image(String imageName) {
         this.imageName = imageName;
+
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        }
+        catch( InterruptedException e) { e.printStackTrace(); }
+    }
+
+    public Image(Image image) {
+        this.imageName = image.imageName;
     }
 
     public void print() {
-        System.out.println("Image with name:"+this.imageName);
-        
+        System.out.println(this.imageName);
     }
 
     @Override
@@ -21,11 +32,12 @@ public class Image implements Element {
     }
 
     @Override
-    public boolean find(Element element) {
-        if (!(element instanceof Image))
-            return false;
-        else {
-            return ((Image) element).imageName.equals(this.imageName);
-        }
+    public String url() {
+        return this.imageName;
+    }
+
+    @Override
+    public Dimension dim() {
+        return this.dim;
     }
 }

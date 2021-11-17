@@ -5,26 +5,21 @@ public class Table implements Element {
         this.title = title;
     }
 
+    public Table(Table table) {
+        this.title = table.title;
+    }
+
     public void print() {
         System.out.println(this.title);
     }
 
     @Override
     public void add(Element element) {
-        
+       
     }
 
     @Override
     public void remove(Element element) {
         
-    }
-
-    @Override
-    public boolean find(Element element) {
-        if (!(element instanceof Table))
-            return false;
-        else {
-            return ((Table) element).title.equals(this.title);
-        }
     }
 }

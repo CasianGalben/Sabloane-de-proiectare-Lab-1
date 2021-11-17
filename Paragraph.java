@@ -5,8 +5,12 @@ public class Paragraph implements Element {
         this.text = text;
     }
 
+    public Paragraph(Paragraph paragraph) {
+        this.text = paragraph.text;
+    }
+
     public void print() {
-        System.out.println("Paragraph:"+this.text);
+        System.out.println(this.text);
     }
 
     @Override
@@ -17,14 +21,5 @@ public class Paragraph implements Element {
     @Override
     public void remove(Element element) {
         
-    }
-
-    @Override
-    public boolean find(Element element) {
-        if (!(element instanceof Paragraph))
-            return false;
-        else {
-            return ((Paragraph) element).text.equals(this.text);
-        }
     }
 }
