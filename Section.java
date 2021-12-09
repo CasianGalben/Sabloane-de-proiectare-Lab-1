@@ -22,7 +22,9 @@ public class Section implements Element {
         this.elemente.add(element);
     }
 
-
+    public void addWithoutCopy(Element elementToBeAdded) throws Exception {
+        this.elemente.add(elementToBeAdded);
+    }
 
     @Override
     public void remove(Element element) {
@@ -30,7 +32,7 @@ public class Section implements Element {
     }
 
     public void print() {
-        System.out.println("Title: " + this.title);
+        System.out.println("Titlu: " + this.title);
 
         for (Element i : this.elemente)
             i.print();
