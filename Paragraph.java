@@ -1,12 +1,21 @@
 public class Paragraph implements Element {
     private String text;
+    private AlignStrategy alignStrategy;
 
     public Paragraph(String text) {
         this.text = text;
     }
 
+    public Paragraph(Paragraph paragraph) {
+        this.text = paragraph.text;
+    }
+
     public void print() {
-        System.out.println("Paragraph:"+this.text);
+        if (this.alignStrategy != null) {
+            this.alignStrategy.render(this, null);
+        }
+        else
+            System.out.println("Paragraph" + this.text);
     }
 
     @Override
@@ -19,12 +28,7 @@ public class Paragraph implements Element {
         
     }
 
-    @Override
-    public boolean find(Element element) {
-        if (!(element instanceof Paragraph))
-            return false;
-        else {
-            return ((Paragraph) element).text.equals(this.text);
-        }
+    public void setAlignStrategy(AlignStrategy align) {
+        this.alignStrategy = align;
     }
 }

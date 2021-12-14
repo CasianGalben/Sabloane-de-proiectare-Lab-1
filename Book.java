@@ -20,7 +20,7 @@ public class Book {
     }
 
     public void print() {
-        System.out.println("Book: " + this.title);
+        System.out.println("Carte: " + this.title);
 
         System.out.println("Authors: ");
         for (Author i : this.Autor)
