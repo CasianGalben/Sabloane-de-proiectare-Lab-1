@@ -30,4 +30,16 @@ public class Book {
         for (Element i : this.elemente)
             i.print();
     }
+
+    public String getTitle() {
+        return null;
+    }
+
+    public Author[] getAuthors() {
+        return null;
+    }
+
+    public Element[] getElements() {
+        return null;
+    }
 }

@@ -63,4 +63,8 @@ public class Image implements Element, Picture {
     public Dimension dim() {
         return this.dim;
     }
+
+    public char[] getImageName() {
+        return null;
+    }
 }

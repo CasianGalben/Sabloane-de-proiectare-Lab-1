@@ -20,7 +20,7 @@ public class ImageProxy implements Element, Picture {
         loadImage().print();
     }
 
-    private Image loadImage() {
+    Image loadImage() {
         if (this.img == null) {
             this.img = new Image(url);
         }
@@ -50,6 +50,10 @@ public class ImageProxy implements Element, Picture {
 
     @Override
     public Dimension dim() {
+        return null;
+    }
+
+    public String getUrl() {
         return null;
     }
 }

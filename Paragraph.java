@@ -31,4 +31,12 @@ public class Paragraph implements Element {
     public void setAlignStrategy(AlignStrategy align) {
         this.alignStrategy = align;
     }
+
+    public AlignStrategy getAlignStrategy() {
+        return alignStrategy;
+    }
+
+    public String getText() {
+        return null;
+    }
 }

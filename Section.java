@@ -37,4 +37,15 @@ public class Section implements Element {
         for (Element i : this.elemente)
             i.print();
     }
+
+    public void accept(BookStatistics stats) {
+    }
+
+    public String getTitle() {
+        return null;
+    }
+
+    public Element[] getElements() {
+        return null;
+    }
 }

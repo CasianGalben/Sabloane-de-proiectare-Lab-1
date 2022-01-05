@@ -22,4 +22,8 @@ public class Table implements Element {
     public void remove(Element element) {
         
     }
+
+    public char[] getTitle() {
+        return null;
+    }
 }
