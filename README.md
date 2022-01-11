@@ -13,4 +13,11 @@ https://github.com/CasianGalben/Sabloane-de-proiectare-Lab-1/commit/131c2ea976be
 
 it's bonus, singleton is missing
 
+# Feedback lab6:
+https://github.com/CasianGalben/Sabloane-de-proiectare-Lab-1/tree/4e1d334bb9da4016b111e303dcb501d707832c33
 
+Visitor not implemented successfully.
+the accept method it's responsible to call visit method from the visitor.
+visitor, in specific visit method should perform the intended operation.
+
+# Proposed grade: 9.5
